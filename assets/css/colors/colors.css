@@ -1,0 +1,6 @@
+@layer base {
+    html {
+        --white: #fff;
+        --dark-blue: #1b1b1f;
+    }
+}

@@ -1,0 +1,6 @@
+@layer base {
+    html {
+        --text-page-color: var(--white);
+        --bg-page-color: var(--dark-blue);
+    }
+}

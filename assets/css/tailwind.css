@@ -1,0 +1,12 @@
+@import "colors/colors.css";
+@import "colors/semantic-colors.css";
+
+@tailwind base;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        @apply bg-page text-page;
+    }
+}
