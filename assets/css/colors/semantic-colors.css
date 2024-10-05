@@ -2,5 +2,6 @@
     html {
         --text-page-color: var(--white);
         --bg-page-color: var(--dark-blue);
+        --primary-color: var(--light-purple);
     }
 }

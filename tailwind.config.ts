@@ -10,7 +10,11 @@ export default {
       textColor: {
         page: 'var(--text-page-color)'
       },
+      colors: {
+        primary: 'var(--primary-color)'
+      }
     },
   },
   plugins: [],
+
 } satisfies Config
