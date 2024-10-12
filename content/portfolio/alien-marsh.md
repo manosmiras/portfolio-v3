@@ -3,7 +3,7 @@ title: 'Alien Marsh'
 description: 'A 3D scene built using C++ and OpenGL.'
 headerImg: '/img/alien-marsh/header.png'
 previewImg: '/img/alien-marsh/header.png'
-tags: [C++, OpenGL, GLSL]
+tags: [Graphics Programming, C++, OpenGL, GLSL]
 repositoryUrl: https://github.com/manosmiras/Alien-Marsh
 order: 3
 outline: 'deep'

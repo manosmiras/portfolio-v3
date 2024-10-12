@@ -3,7 +3,7 @@ title: 'Level Generator'
 description: "Procedural generation of levels using genetic algorithms in Unity."
 headerImg: '/img/level-generator/header.png'
 previewImg: '/img/level-generator/header.png'
-tags: [Unity, C#, Genetic Algorithms, Procedural Generation]
+tags: [Genetic Algorithms, Procedural Generation, Unity, C#]
 repositoryUrl: https://github.com/manosmiras/Level-Generator
 order: 2
 outline: 'deep'

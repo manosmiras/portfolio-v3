@@ -3,7 +3,7 @@ title: 'Bridge Physics'
 description: 'A physics driven bridge simulation.'
 headerImg: '/img/bridge-physics/header.png'
 previewImg: '/img/bridge-physics/header.png'
-tags: [C++, OpenGL, GLSL]
+tags: [Physics Based Animation, C++, OpenGL, GLSL]
 repositoryUrl: https://github.com/manosmiras/Bridge-Physics
 order: 4
 outline: 'deep'
