@@ -3,5 +3,7 @@
         --text-page-color: var(--white);
         --bg-page-color: var(--dark-blue);
         --primary-color: var(--light-purple);
+        --secondary-color: var(--light-blue);
+        --bg-tag-color: var(--light-blue);
     }
 }
