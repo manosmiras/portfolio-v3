@@ -1,24 +1,28 @@
 <script setup lang="ts">
 import {useRoute} from 'vue-router';
+import {definePageMeta} from "#imports";
+
+definePageMeta({
+  layout: 'project',
+});
 
 const route = useRoute();
 const slug = route.params.slug[0];
-const {data} = await useAsyncData('project', () => queryContent(`/portfolio/${slug}`).findOne());
+const { data } = await useAsyncData('project', () => queryContent(`/portfolio/${slug}`).findOne());
+// console.log(data.value.body.toc);
 </script>
 
 <template>
-  <main>
-    <div class="flex gap-x-40">
-      <div> left header</div>
-      <div>
-        <h1 class="font-bold text-4xl mb-2">
-          {{ data.title }}
-        </h1>
-        <img class="transition-all w-100 rounded-lg group-hover:brightness-105" :src="data.previewImg" :alt="data.title">
-        <ContentDoc/>
-      </div>
-      <div>table of contents</div>
+  <main class="flex flex-col gap-2">
+    <h1 class="font-bold text-4xl">
+      {{ data.title }}
+    </h1>
+    <img class="transition-all w-100 rounded-lg group-hover:brightness-105" :src="data.previewImg" :alt="data.title">
+    <p>{{data.description}}</p>
+    <div class="flex gap-x-2">
+      <TagList :tags="data.tags"></TagList>
     </div>
+    <ContentDoc/>
   </main>
 </template>
 

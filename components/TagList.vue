@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import Tag from "~/components/Tag.vue";
 
-defineProps({
-  tags: Array as Array<string>,
-});
+defineProps<{
+  tags: string[],
+}>();
 
 </script>
 

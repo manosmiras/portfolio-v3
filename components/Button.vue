@@ -1,13 +1,10 @@
 <script setup lang="ts">
-   defineProps({
-    variant: {
-      type: String as 'primary' | 'secondary',
-      default: 'primary',
-    },
-    to: {
-      type: String
-    }
-  })
+   withDefaults(defineProps<{
+     variant?: 'primary' | 'secondary',
+     to: string
+   }>(), {
+     variant: 'primary'
+   });
 </script>
 
 <template>

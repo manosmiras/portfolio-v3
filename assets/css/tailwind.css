@@ -10,4 +10,8 @@
         @apply bg-page text-page;
         font-family: 'Inter', sans-serif;
     }
+
+    .link {
+        @apply text-sm transition-all border-b-2 border-b-transparent hover:text-primary;
+    }
 }
