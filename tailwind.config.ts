@@ -6,10 +6,12 @@ export default {
     extend: {
       backgroundColor: {
         page: 'var(--bg-page-color)',
-        tag: 'var(--bg-tag-color)'
+        tag: 'var(--bg-tag-color)',
+        header: 'var(--bg-header-color)',
       },
       textColor: {
-        page: 'var(--text-page-color)'
+        page: 'var(--text-page-color)',
+        pageAlt: 'var(--text-page-alt-color)',
       },
       colors: {
         primary: 'var(--primary-color)',

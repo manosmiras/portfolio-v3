@@ -1,18 +1,28 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-<div>
-  <div class="flex flex-col min-h-screen lg:px-52 md:px-32 sm:px-6 h-100">
-    <Header class="sticky top-0 z-50 bg-page" />
-    <div class="py-10 flex flex-col flex-grow">
-      <slot/>
+  <div>
+    <div class="flex flex-col min-h-screen h-100">
+      <Header :class="scrolledPastHero ? 'bg-header' : 'bg-transparent'" class="transition-colors duration-500 transition-discrete fixed w-screen top-0 z-50 px-20"/>
+      <div class="flex flex-col flex-grow">
+        <slot/>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+const scrolledPastHero = ref(false);
 
-</style>
+const trackScroll = () => {
+  scrolledPastHero.value = window.scrollY > window.innerHeight;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', trackScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', trackScroll);
+});
+
+
+</script>

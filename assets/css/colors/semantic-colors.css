@@ -1,9 +1,11 @@
 @layer base {
     html {
         --text-page-color: var(--white);
-        --bg-page-color: var(--dark-blue);
-        --primary-color: var(--light-purple);
-        --secondary-color: var(--light-blue);
+        --text-page-alt-color: #13131b;
+        --bg-page-color: #13131b;
+        --bg-header-color: #13131b;
+        --primary-color: #a5d440;
+        --secondary-color: #363a4e;
         --bg-tag-color: var(--light-blue);
     }
 }

@@ -1,18 +1,12 @@
 <script setup lang="ts">
-
+import Portfolio from "~/components/Portfolio.vue";
+import Hero from "~/components/Hero.vue";
 </script>
 
 <template>
-  <div class="flex flex-col h-100 flex-grow items-center justify-center gap-2 pb-40">
-    <div class="text-7xl font-bold text-primary">Manos Miras</div>
-    <div class="text-3xl font-semibold">Software Engineer & Game Developer</div>
-    <div class="flex gap-6 p-4">
-      <Button to="/portfolio">Portfolio</Button>
-      <Button to="/blog" variant="secondary">Blog</Button>
-    </div>
+  <Hero></Hero>
+  <div class="flex flex-col">
+    <Portfolio id="portfolio"></Portfolio>
+    <Blog id="blog"></Blog>
   </div>
 </template>
-
-<style scoped>
-
-</style>

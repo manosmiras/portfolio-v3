@@ -6,12 +6,19 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         @apply bg-page text-page;
         font-family: 'Inter', sans-serif;
     }
 
     .link {
-        @apply text-sm transition-all border-b-2 border-b-transparent hover:text-primary;
+        @apply text-sm font-black transition-all border-b-2 border-b-transparent hover:text-primary;
+    }
+
+    .link-active {
+        @apply border-b-primary text-primary;
     }
 }

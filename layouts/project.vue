@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import {useRoute} from "#vue-router";
+import {useAsyncData} from "#app";
+import type {Project} from "~/types/project";
 
 const route = useRoute();
-const { data } = await useAsyncData('project', () => queryContent(route.path).findOne());
-console.log(data.value?.body.toc);
+const { data: project } = await useAsyncData('project', () => queryContent<Project>(route.path).findOne());
+const { data: portfolio } = await useAsyncData('portfolio', () => queryContent<Project[]>('/portfolio').find());
+const { data: blog } = await useAsyncData('blog', () => queryContent<Project[]>('/blog').find());
 </script>
 
 <template>
@@ -11,12 +14,11 @@ console.log(data.value?.body.toc);
     <div class="flex flex-col min-h-screen lg:px-52 md:px-32 sm:px-6 h-100">
       <Header class="sticky top-0 z-50 bg-page" />
       <div>
-        <div class="fixed top-28 left-52 z-50">left</div>
+        <ProjectList :portfolio="portfolio" :blog="blog" class="fixed top-28 left-52 z-50 w-48"/>
         <div class="mx-60 py-2">
           <slot/>
         </div>
-        <TableOfContents class="fixed top-28 right-52 z-50" :toc="data.body.toc">right</TableOfContents>
-<!--        <TableOfContents class="col-span-1 sidebar" :links="data.body.toc.links">right</TableOfContents>-->
+        <TableOfContents class="fixed top-28 right-52 z-50" :toc="project.body.toc"/>
       </div>
     </div>
   </div>
