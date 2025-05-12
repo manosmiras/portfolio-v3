@@ -10,7 +10,7 @@
         <div class="transition-all text-primary group-hover:text-primary font-semibold text-lg">{{project.title}}</div>
         <div class="mb-2">{{ project.description }}</div>
         <div class="flex gap-x-2">
-          <TagList :tags="project.tags"></TagList>
+          <Tags v-model="project.tags"></Tags>
         </div>
       </NuxtLink>
     </div>

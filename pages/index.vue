@@ -5,7 +5,7 @@ import Hero from "~/components/Hero.vue";
 
 <template>
   <Hero></Hero>
-  <div class="flex flex-col">
+  <div class="flex flex-col pb-20">
     <Portfolio id="portfolio"></Portfolio>
     <Blog id="blog"></Blog>
   </div>
