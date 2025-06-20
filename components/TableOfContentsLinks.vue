@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import type {TocLink} from "@nuxt/content";
-
-defineProps<{
-  links: TocLink[];
-}>();
-</script>
-
 <template>
   <ul>
     <li :class="`toc-link-depth-${link.depth}`" v-for="link in links" :key="link.text">
@@ -16,6 +8,14 @@ defineProps<{
     </li>
   </ul>
 </template>
+
+<script setup lang="ts">
+import type {TocLink} from "@nuxt/content";
+
+defineProps<{
+  links: TocLink[];
+}>();
+</script>
 
 <style scoped>
 .toc-link-depth-2 {

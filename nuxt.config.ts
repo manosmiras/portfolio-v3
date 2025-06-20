@@ -7,13 +7,5 @@ export default defineNuxtConfig({
     options: {
       linkActiveClass: 'link-active'
     }
-  },
-  content: {
-    markdown: {
-      toc: {
-        depth: 5,
-        searchDepth: 5,
-      },
-    }
   }
 })

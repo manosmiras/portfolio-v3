@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type {Project} from "~/types/project";
+import type { PortfolioCollectionItem, BlogCollectionItem } from '@nuxt/content';
 
 defineProps<{
-  portfolio: Project[],
-  blog: Project[]
+  portfolio: PortfolioCollectionItem[],
+  blog: BlogCollectionItem[]
 }>();
 </script>
 
@@ -17,7 +17,7 @@ defineProps<{
       <div>
         <ul>
           <li class="py-1" v-for="project in portfolio">
-            <NuxtLink class="link text-gray-300" :to="project._path">{{ project.title }}</NuxtLink>
+            <NuxtLink class="link text-gray-300" :to="project.path">{{ project.title }}</NuxtLink>
           </li>
         </ul>
       </div>
@@ -28,7 +28,7 @@ defineProps<{
     <div class="font-semibold text-sm">Blog</div>
     <ul>
       <li class="py-1" v-for="project in blog">
-        <NuxtLink class="link text-gray-300" :to="project._path">{{ project.title }}</NuxtLink>
+        <NuxtLink class="link text-gray-300" :to="project.path">{{ project.title }}</NuxtLink>
       </li>
     </ul>
   </div>

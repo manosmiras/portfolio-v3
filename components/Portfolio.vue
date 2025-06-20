@@ -5,7 +5,7 @@
       <div class="text-lg">A testament to my habit of starting too many projects.</div>
     </div>
     <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 px-20">
-      <NuxtLink :to="project._path" class="hover:cursor-pointer group flex flex-col" v-for="project in data">
+      <NuxtLink :to="project.path" class="hover:cursor-pointer group flex flex-col" v-for="project in portfolio">
         <img class="mb-2 transition-all w-100 rounded-lg group-hover:brightness-105" :src="project.previewImg" :alt="project.title">
         <div class="transition-all text-primary group-hover:text-primary font-semibold text-lg">{{project.title}}</div>
         <div class="mb-2">{{ project.description }}</div>
@@ -18,6 +18,5 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData('portfolio', () => queryContent('/portfolio').find());
-
+const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').all());
 </script>

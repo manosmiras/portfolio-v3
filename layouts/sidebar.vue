@@ -1,13 +1,3 @@
-<script setup lang="ts">
-import {useRoute} from "#vue-router";
-import {useAsyncData} from "#app";
-import type {Project} from "~/types/project";
-
-const route = useRoute();
-const { data: portfolio } = await useAsyncData('portfolio', () => queryContent<Project[]>('/portfolio').find());
-const { data: blog } = await useAsyncData('blog', () => queryContent<Project[]>('/blog').find());
-</script>
-
 <template>
   <div class="grid grid-cols-5 gap-20 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
     <div class="relative">
@@ -20,6 +10,9 @@ const { data: blog } = await useAsyncData('blog', () => queryContent<Project[]>(
   </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import {useAsyncData} from "#app";
 
-</style>
+const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').all());
+const { data: blog } = await useAsyncData('blog', () => queryCollection('blog').all());
+</script>
