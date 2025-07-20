@@ -1,10 +1,44 @@
 <template>
-  <main v-if="page">
-    <ContentRenderer :value="page"/>
+  <main v-if="page" class="flex flex-col gap-2">
+    <img class="transition-all w-100 rounded-lg group-hover:brightness-105" :src="page.previewImg" :alt="page.title">
+    <div class="flex gap-x-4 items-start justify-between">
+      <div>
+        <h1 class="font-bold text-4xl">
+          {{ page.title }}
+        </h1>
+        <p class="description text-xl">{{ page.description }}</p>
+      </div>
+      <Tags class="pt-1" v-model="page.tags"></Tags>
+    </div>
+    <ContentRenderer v-if="page" :value="page"/>
   </main>
 </template>
 
 <script setup lang="ts">
+import {useRoute} from 'vue-router';
+import {definePageMeta} from "#imports";
+
+definePageMeta({
+  layout: 'project',
+});
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => queryCollection('blog').path(route.path).first());
+const {data: page} = await useAsyncData(route.path, () => queryCollection('blog').path(route.path).first());
 </script>
+
+<style scoped>
+:deep(h2) {
+  @apply text-2xl font-bold pt-6 mt-6 mb-2 border-t border-t-secondary;
+}
+
+:deep(h3) {
+  @apply text-xl font-bold pt-3 mt-3 mb-2;
+}
+
+:deep(img) {
+  @apply my-2;
+}
+
+:deep(p:not(.description)) {
+  @apply mb-2;
+}
+</style>

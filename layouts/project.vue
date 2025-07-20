@@ -22,7 +22,11 @@ import {useAsyncData} from "#app";
 const route = useRoute();
 const { data: project } = await useAsyncData(
     () => `project-${route.path}`, // reactive key
-    () => queryCollection('portfolio').path(route.path).first()
+    () => {
+      const segments = route.path.split('/').filter(Boolean);
+      const collection = segments[0] as "blog" | "portfolio";
+      return queryCollection(collection).path(route.path).first();
+    }
 );
 const toc = computed(() => project.value?.body?.toc);
 const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').order('order', 'ASC').all());

@@ -6,7 +6,7 @@
         <h1 class="font-bold text-4xl">
           {{ page.title }}
         </h1>
-        <p class="description text-xl">{{page.description}}</p>
+        <p class="description text-xl">{{ page.description }}</p>
       </div>
       <Tags class="pt-1" v-model="page.tags"></Tags>
     </div>
@@ -21,9 +21,8 @@ import {definePageMeta} from "#imports";
 definePageMeta({
   layout: 'project',
 });
-
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => queryCollection('portfolio').path(route.path).first());
+const {data: page} = await useAsyncData(route.path, () => queryCollection('portfolio').path(route.path).first());
 </script>
 
 <style scoped>
