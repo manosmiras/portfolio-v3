@@ -1,13 +1,15 @@
 <template>
   <div>
-    <div class="flex flex-col min-h-screen lg:px-52 md:px-32 sm:px-6 h-100">
-      <Header class="sticky top-0 z-50 bg-page" />
-      <div>
-        <ProjectList v-if="portfolio && blog" :portfolio="portfolio" :blog="blog" class="fixed top-28 left-52 z-50 w-48"/>
-        <div class="mx-60 py-2">
-          <slot/>
+    <div class="flex flex-col min-h-screen ">
+      <Header class="bg-page sticky w-full top-0 z-50 px-20" />
+      <div class="lg:px-52 md:px-32 sm:px-6 h-100">
+        <div>
+          <ProjectList v-if="portfolio && blog" :portfolio="portfolio" :blog="blog" class="fixed top-28 left-52 w-48"/>
+          <div class="mx-60 py-2">
+            <slot/>
+          </div>
+          <TableOfContents v-if="toc" class="fixed top-28 right-52" :toc="toc"/>
         </div>
-        <TableOfContents v-if="toc" class="fixed top-28 right-52 z-50" :toc="toc"/>
       </div>
     </div>
   </div>

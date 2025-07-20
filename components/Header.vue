@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <header>
     <nav class="flex justify-between gap-x-4 py-6 items-center">
