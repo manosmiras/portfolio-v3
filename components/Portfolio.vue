@@ -18,5 +18,5 @@
 </template>
 
 <script setup lang="ts">
-const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').all());
+const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').order('order', 'ASC').all());
 </script>

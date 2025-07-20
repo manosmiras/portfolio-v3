@@ -25,6 +25,6 @@ const { data: project } = await useAsyncData(
     () => queryCollection('portfolio').path(route.path).first()
 );
 const toc = computed(() => project.value?.body?.toc);
-const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').all());
-const { data: blog } = await useAsyncData('blog', () => queryCollection('blog').all());
+const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').order('order', 'ASC').all());
+const { data: blog } = await useAsyncData('blog', () => queryCollection('blog').order('order', 'ASC').all());
 </script>
