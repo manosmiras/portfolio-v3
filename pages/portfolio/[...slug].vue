@@ -26,13 +26,6 @@ const {data: page} = await useAsyncData(route.path, () => queryCollection('portf
 </script>
 
 <style scoped>
-:deep(h2) {
-  @apply text-2xl font-bold pt-6 mt-6 mb-2 border-t border-t-secondary;
-}
-
-:deep(h3) {
-  @apply text-xl font-bold pt-3 mt-3 mb-2;
-}
 
 :deep(img) {
   @apply my-2;

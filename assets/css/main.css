@@ -1,0 +1,61 @@
+@import "colors.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-page text-page;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .link {
+        @apply text-sm font-black transition-all border-b-2 border-b-transparent hover:text-primary;
+    }
+
+    .link-active {
+        @apply border-b-primary text-primary;
+    }
+
+    h2, h3, h4, h5, h6 {
+        color: var(--text-header-color);
+        @apply font-bold pt-6 mb-2;
+    }
+
+    h1 {
+        color: var(--text-header-color);
+        @apply mb-2;
+    }
+
+    h2 {
+        @apply text-2xl;
+
+        &:first-of-type {
+            @apply border-t-2 border-t-secondary;
+        }
+    }
+
+    h3 {
+        @apply text-xl;
+    }
+
+    h4 {
+        @apply text-lg;
+    }
+
+    p {
+        color: var(--text-paragraph-color);
+    }
+}
+
+.language-text {
+    background-color: var(--bg-code-sample-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    @apply mb-2;
+}

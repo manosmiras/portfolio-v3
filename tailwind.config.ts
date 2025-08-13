@@ -12,6 +12,7 @@ export default {
       textColor: {
         page: 'var(--text-page-color)',
         pageAlt: 'var(--text-page-alt-color)',
+        paragraph: 'var(--text-paragraph-color)'
       },
       colors: {
         primary: 'var(--primary-color)',

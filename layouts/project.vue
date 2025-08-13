@@ -1,15 +1,27 @@
 <template>
-  <div>
-    <div class="flex flex-col min-h-screen ">
-      <Header class="bg-page sticky w-full top-0 z-50 px-20" />
-      <div class="lg:px-52 md:px-32 sm:px-6 h-100">
-        <div>
-          <ProjectList v-if="portfolio && blog" :portfolio="portfolio" :blog="blog" class="fixed top-28 left-52 w-48"/>
-          <div class="mx-60 py-2">
-            <slot/>
-          </div>
-          <TableOfContents v-if="toc" class="fixed top-28 right-52" :toc="toc"/>
-        </div>
+  <div class="min-h-screen flex flex-col">
+    <Header class="bg-page sticky top-0 z-50 px-6 lg:px-20"/>
+
+    <div class="mx-auto px-6 xl:px-20 pb-20">
+
+      <div class="grid gap-8 py-6
+                  grid-cols-1
+                  xl:grid-cols-[14rem_minmax(0,1fr)_16rem]">
+
+        <aside v-if="portfolio && blog"
+               class="hidden xl:block sticky top-28 self-start">
+          <ProjectList :portfolio="portfolio" :blog="blog"/>
+        </aside>
+
+        <main class="min-w-0">
+          <slot/>
+        </main>
+
+        <aside v-if="toc"
+               class="pl-4 hidden xl:block sticky top-28 self-start
+                      max-h-[calc(100vh-7rem)] overflow-auto">
+          <TableOfContents :toc="toc"/>
+        </aside>
       </div>
     </div>
   </div>
@@ -20,7 +32,7 @@ import {useRoute} from "#vue-router";
 import {useAsyncData} from "#app";
 
 const route = useRoute();
-const { data: project } = await useAsyncData(
+const {data: project} = await useAsyncData(
     () => `project-${route.path}`, // reactive key
     () => {
       const segments = route.path.split('/').filter(Boolean);
@@ -29,6 +41,6 @@ const { data: project } = await useAsyncData(
     }
 );
 const toc = computed(() => project.value?.body?.toc);
-const { data: portfolio } = await useAsyncData('portfolio', () => queryCollection('portfolio').order('order', 'ASC').all());
-const { data: blog } = await useAsyncData('blog', () => queryCollection('blog').order('order', 'ASC').all());
+const {data: portfolio} = await useAsyncData('portfolio', () => queryCollection('portfolio').order('order', 'ASC').all());
+const {data: blog} = await useAsyncData('blog', () => queryCollection('blog').order('order', 'ASC').all());
 </script>

@@ -7,5 +7,17 @@ export default defineNuxtConfig({
     options: {
       linkActiveClass: 'link-active'
     }
+  },
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css',
+  },
+  content: {
+    build: {
+      markdown: {
+        toc: {
+          depth: 5,
+        }
+      }
+    }
   }
 })

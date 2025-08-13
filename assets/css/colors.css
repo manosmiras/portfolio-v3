@@ -1,0 +1,14 @@
+@layer base {
+    html {
+        --text-page-color: white;
+        --text-paragraph-color: #e6e6e6;
+        --text-header-color: white;
+        --text-page-alt-color: #13131b;
+        --bg-page-color: #18181E;
+        --bg-header-color: #18181E;
+        --bg-code-sample-color: #2a2a35;
+        --primary-color: white;
+        --secondary-color: #363a4e;
+        --bg-tag-color: #313139;
+    }
+}
