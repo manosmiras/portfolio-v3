@@ -2,7 +2,7 @@
   <div>
     <div class="flex flex-col gap-2 text-center py-10 justify-center">
       <div class="text-4xl font-black text-primary">Blog</div>
-      <div class="text-lg">Notes, tips & tricks for my future self.</div>
+      <p class="text-lg">Notes, tips & tricks for my future self</p>
     </div>
     <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 px-20">
       <NuxtLink :to="blog.path" class="hover:cursor-pointer group flex flex-col gap-y-1" v-for="blog in blogs">

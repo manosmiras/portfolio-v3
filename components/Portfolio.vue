@@ -2,7 +2,7 @@
   <div>
     <div class="flex flex-col gap-2 text-center py-10 justify-center">
       <div class="text-4xl font-black text-primary">Portfolio</div>
-      <div class="text-lg">A testament to my habit of starting too many projects.</div>
+      <p class="text-lg">A testament to my habit of starting too many projects</p>
     </div>
     <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 px-20">
       <NuxtLink :to="project.path" class="hover:cursor-pointer group flex flex-col" v-for="project in portfolio">
