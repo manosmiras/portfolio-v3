@@ -10,7 +10,7 @@
 
         <aside v-if="portfolio && blog"
                class="hidden xl:block sticky top-28 self-start">
-          <ProjectList :portfolio="portfolio" :blog="blog"/>
+          <ProjectNav :portfolio="portfolio" :blog="blog"/>
         </aside>
 
         <main class="min-w-0">

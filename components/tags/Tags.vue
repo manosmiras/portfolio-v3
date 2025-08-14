@@ -7,7 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import Tag from "~/components/Tag.vue";
 
 defineProps<{
   modelValue: string[],
