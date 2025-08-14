@@ -8,7 +8,7 @@
       <NuxtLink class="flex items-center hover:text-primary" to="https://www.github.com/manosmiras" target="_blank" rel="noopener">
         <Icon name="uil:github" size="1.5rem"/>
       </NuxtLink>
-      <NuxtLink class="flex items-center hover:text-primary" to="https://www.linkedin.com/in/manosmiras/" target="_blank" rel="noopener">
+      <NuxtLink class="flex items-center hover:text-primary" to="https://www.linkedin.com/in/manosmiras" target="_blank" rel="noopener">
         <Icon name="uil:linkedin" size="1.5rem"/>
       </NuxtLink>
     </nav>
