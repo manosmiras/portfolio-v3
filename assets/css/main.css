@@ -50,6 +50,10 @@
 
     p {
         color: var(--text-paragraph-color);
+
+        a {
+            color: var(--text-url-color);
+        }
     }
 }
 
