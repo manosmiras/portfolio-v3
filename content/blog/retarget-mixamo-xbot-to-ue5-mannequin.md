@@ -6,6 +6,7 @@ previewImg: '/img/xbot-to-mannequin/matched-poses.png'
 tags: [Mixamo, Unreal Engine 5, Animation, Retargeting]
 dateCreated: '2023-03-07'
 dateUpdated: '2023-03-12'
+order: 1
 outline: 'deep'
 ---
 
