@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col min-h-screen h-100">
-      <Header :class="scrolledPastHero ? 'bg-header' : 'bg-transparent'" class="transition-colors duration-500 transition-discrete fixed w-full top-0 z-50 px-20"/>
+      <Header :class="scrolledPastHero || isMobile ? 'bg-header' : 'bg-transparent'" class="transition-colors duration-500 transition-discrete fixed w-full top-0 z-50 px-20"/>
       <div class="flex flex-col flex-grow">
         <slot/>
       </div>
@@ -23,6 +23,9 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', trackScroll);
 });
+
+const { isMobile } = useIsMobile(768);
+
 
 
 </script>
