@@ -1,6 +1,10 @@
 <template>
   <main v-if="page" class="flex flex-col gap-2">
-    <img class="transition-all w-100 rounded-lg group-hover:brightness-105" :src="page.previewImg" :alt="page.title">
+    <img
+        class="self-center block h-auto w-auto max-h-[50vh] max-w-full rounded-lg transition-all group-hover:brightness-105"
+        :src="page.headerImg"
+        :alt="page.title"
+    />
     <div class="flex gap-x-4 items-start justify-between">
       <div>
         <h1 class="font-bold text-4xl">

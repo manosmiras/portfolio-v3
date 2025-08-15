@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <Header class="bg-page sticky top-0 z-50 px-6 lg:px-20"/>
+    <Header class="bg-page sticky top-0 z-50 px-6 xl:px-20"/>
 
     <div class="mx-auto px-6 xl:px-20 pb-20">
 
@@ -9,16 +9,16 @@
                   xl:grid-cols-[14rem_minmax(0,1fr)_16rem]">
 
         <aside v-if="portfolio && blog"
-               class="hidden xl:block sticky top-28 self-start">
+               class="hidden xl:block sticky top-[6.5rem] self-start">
           <ProjectNav :portfolio="portfolio" :blog="blog"/>
         </aside>
 
-        <main class="min-w-0">
+        <main class="min-w-0 px-0 xl:px-10 2xl:px-20">
           <slot/>
         </main>
 
         <aside v-if="toc"
-               class="pl-4 hidden xl:block sticky top-28 self-start
+               class="pl-4 hidden xl:block sticky top-[6.5rem] self-start
                       max-h-[calc(100vh-7rem)] overflow-auto">
           <TableOfContents :toc="toc"/>
         </aside>
