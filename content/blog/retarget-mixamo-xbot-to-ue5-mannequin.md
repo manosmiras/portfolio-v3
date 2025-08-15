@@ -205,10 +205,10 @@ If you open the **Asset Browser** tab in the **X_Bot_Retargeter**, you should se
 
 Double-clicking any animation should play a preview in the retargeter, and if you've followed all the steps they should match up nicely.
 
-![Reaction Animation](https://res.cloudinary.com/dt495tkve/image/upload/v1677871787/manosmiras/x-bot-to-mannequin/reaction_yb4yxd.gif)
+![Reaction Animation](/img/xbot-to-mannequin/reaction.gif)
 
 You can now export animations to the target character from within the **X_Bot_Retargeter**, in the **Asset Browser** tab, using the **Export Selected Animations** button.
-![Export Selected Animations](/img/xbot-to-mannequin/export-selected-animations.png) 
+![Export Selected Animations](/img/xbot-to-mannequin/export-selected-animations.png)
 
 ![Export Retargeted Animations](/img/xbot-to-mannequin/export-retargeted-animations.png)
 
