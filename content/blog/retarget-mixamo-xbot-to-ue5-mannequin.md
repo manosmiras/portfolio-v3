@@ -1,8 +1,8 @@
 ---
 title: 'Mixamo X Bot to UE 5 Mannequin'
 description: "A step by step guide on how to retarget animations from Mixamo's X Bot to Unreal Engine's Mannequin."
-headerImg: '/img/xbot-to-mannequin/header.png'
-previewImg: '/img/xbot-to-mannequin/matched-poses.png'
+headerImg: '/img/xbot-to-mannequin/header.webp'
+previewImg: '/img/xbot-to-mannequin/matched-poses.webp'
 tags: [Mixamo, Unreal Engine 5, Animation, Retargeting]
 dateCreated: '2023-03-07'
 dateUpdated: '2023-03-12'
@@ -55,16 +55,16 @@ First, create an **XBot** folder under the **Content/Characters** directory, the
 Inside the **XBot** folder, right-click on the Content Drawer and navigate to **Import to /Game/Characters/XBot...** in order to import the X Bot Character.
 You should see a prompt pop up, ensure you have the **Use T0 As Ref Pose** option checked and click Import.
 
-![Xbot import settings 1](/img/xbot-to-mannequin/xbot-import-settings-1.png) ![Xbot import settings 2](/img/xbot-to-mannequin/xbot-import-settings-2.png)
+![Xbot import settings 1](/img/xbot-to-mannequin/xbot-import-settings-1.webp) ![Xbot import settings 2](/img/xbot-to-mannequin/xbot-import-settings-2.webp)
 
 - Move the materials to the **Characters/XBot/Materials** folder.
-![Xbot materials](/img/xbot-to-mannequin/materials.png)
+![Xbot materials](/img/xbot-to-mannequin/materials.webp)
 - Move the Skeleton, Skeletal Mesh & Physics Asset to the **Characters/XBot/Meshes** folder.
-![Xbot meshes](/img/xbot-to-mannequin/meshes.png)
+![Xbot meshes](/img/xbot-to-mannequin/meshes.webp)
 
 ### Import the Animation
 Inside the **XBot/Animations** folder, right-click on the Content Drawer and navigate to **Import to /Game/Characters/XBot/Animations...** in order to import the animation. When the prompt pops up, select the **X_Bot_Skeleton** as the Skeleton, and click **Import**.
-![Import animation](/img/xbot-to-mannequin/import-animation.png)
+![Import animation](/img/xbot-to-mannequin/import-animation.webp)
 
 ### Create an IK Rig
 Inside the **Characters/XBot/Rigs** folder, right-click on the Content Drawer and navigate to **Animation > IK Rig** in order to create an IK Rig.
@@ -72,22 +72,22 @@ Inside the **Characters/XBot/Rigs** folder, right-click on the Content Drawer an
 You will be prompted to pick a Skeletal Mesh, pick the **X_Bot** Skeletal Mesh which was imported in the previous steps, and name the created IK Rig: **X_Bot_Rig**.
 #### Setup retarget chains
 Open up the **X_Bot_Rig**, in the **Hierarchy** tab, right-click on the **Hips** bone and select the **Set Retarget Root** option.
-![Set Retarget Root on Hips](/img/xbot-to-mannequin/set-retarget-root.png)
+![Set Retarget Root on Hips](/img/xbot-to-mannequin/set-retarget-root.webp)
 
 right-click the **Hips** bone again, this time select the **New Retarget Chain from Selected Bones**
-![New Retarget Chain from Selected Bones](/img/xbot-to-mannequin/new-retarget-chain-from-selected-bones.png)
+![New Retarget Chain from Selected Bones](/img/xbot-to-mannequin/new-retarget-chain-from-selected-bones.webp)
 
 Name the bone chain: **Root**, click OK.
-![New Retarget Chain Prompt](/img/xbot-to-mannequin/new-retarget-chain-prompt.png)
+![New Retarget Chain Prompt](/img/xbot-to-mannequin/new-retarget-chain-prompt.webp)
 
 If prompted to **"Add goal to end bone, Hips of new chain, Root?"**, select **No Goal**.
 
 That should be the chain created, you should be able to see it in the **IK Retargeting** tab.
-![Root Chain](/img/xbot-to-mannequin/root-chain.png)
+![Root Chain](/img/xbot-to-mannequin/root-chain.webp)
 *(Note: You can also add a new retarget chain using the **Add New Chain** button.)*
 
 Next, you'll want to retarget the Spine, select **Spine** through **Spine2**, right-click and select **New Retarget Chain from Selected Bones**
-![Spine - New Retarget Chain from Selected Bones](/img/xbot-to-mannequin/spine-new-retarget-chain-from-selected-bones.png)
+![Spine - New Retarget Chain from Selected Bones](/img/xbot-to-mannequin/spine-new-retarget-chain-from-selected-bones.webp)
 
 The process is pretty repetitive and straight forward from here on out, so I will just list all the bone chains you have to retarget, just follow the same process from above for the remaining bones.
 
@@ -113,7 +113,7 @@ The process is pretty repetitive and straight forward from here on out, so I wil
 | LeftLeg       | LeftUpLeg, LeftLeg, LeftFoot, LeftToeBase, LeftToe_End                 |
 | RightLeg      | RightUpLeg, RightLeg, RightFoot, RightToeBase, RightToe_End            |
 
-![Full Retarget Chain](/img/xbot-to-mannequin/retarget-chain.png)
+![Full Retarget Chain](/img/xbot-to-mannequin/retarget-chain.webp)
 
 It's important you use the same names for the chains of bones I've specified, otherwise you may have issues later on when you create the IK Retargeter, as it uses a fuzzy string match to pair the chain names of each IK Rig.
 
@@ -164,7 +164,7 @@ In the IK Retargeter, you will have to set every Metacarpal, Twist & IK **Target
 #### Matching poses
 
 When you click on the **Run retargeter** button, you should see our retargeter in action, however, you will also notice that the poses from the two characters do not match.
-![Unmatched poses](/img/xbot-to-mannequin/unmatched-poses.png)
+![Unmatched poses](/img/xbot-to-mannequin/unmatched-poses.webp)
 *(Note: If your characters are overlapping, you can move one of them using either the **Target Mesh Offset** or the **Source Mesh Offset**.)*
 
 In order to get good-looking animations from the retargeter, both the target and the source character poses need to match.
@@ -185,12 +185,12 @@ In the download settings, make sure the following are selected:
 - Pose: T-pose
 
 Import the character back into Unreal Engine, set the **Skeleton** to **SK_Mannequin** the rest of the import options should be fine.
-![Import Quinn](/img/xbot-to-mannequin/import-quinn.png)
+![Import Quinn](/img/xbot-to-mannequin/import-quinn.webp)
 
 That should have imported a bunch of assets, what you're interested in is the T-posing Animation Sequence, right-click it and click **Create > Create Pose Asset**, then click **Accept**.
 
 Open the Pose Asset you just created, it should have two poses, make sure you set the Weight of the second one to **1.0**
-![Pose Weight](/img/xbot-to-mannequin/pose-weight.png)
+![Pose Weight](/img/xbot-to-mannequin/pose-weight.webp)
 
 You should now have a T-posing character.
 
@@ -199,7 +199,7 @@ Delete every imported asset, except for the **Pose Asset** you just created, as 
 Open the **X_Bot_Retargeter**, in the **Target** tab, click **Create > Import from Pose Asset**, select the **Pose Asset** you created in the previous steps and click **Import New Retarget Pose**.
 
 You should now see both the **X Bot** and **Quinn** in the T-pose state.
-![Matched poses](/img/xbot-to-mannequin/matched-poses.png)
+![Matched poses](/img/xbot-to-mannequin/matched-poses.webp)
 
 If you open the **Asset Browser** tab in the **X_Bot_Retargeter**, you should see a list of Animations you have imported which you can retarget.
 
@@ -208,12 +208,12 @@ Double-clicking any animation should play a preview in the retargeter, and if yo
 ![Reaction Animation](/img/xbot-to-mannequin/reaction.gif)
 
 You can now export animations to the target character from within the **X_Bot_Retargeter**, in the **Asset Browser** tab, using the **Export Selected Animations** button.
-![Export Selected Animations](/img/xbot-to-mannequin/export-selected-animations.png)
+![Export Selected Animations](/img/xbot-to-mannequin/export-selected-animations.webp)
 
-![Export Retargeted Animations](/img/xbot-to-mannequin/export-retargeted-animations.png)
+![Export Retargeted Animations](/img/xbot-to-mannequin/export-retargeted-animations.webp)
 
 You should also be able to retarget **X_Bot** animations from the **Content Drawer** by right-clicking them in the asset browser and selecting **Retarget Animation Assets > Duplicate and Retarget Animation Assets**. Just be sure to select the **X_Bot_Retargeter** as the IK Retargeter.
 
-![Duplicate and Retarget Assets](/img/xbot-to-mannequin/duplicate-and-retarget-assets.png)
+![Duplicate and Retarget Assets](/img/xbot-to-mannequin/duplicate-and-retarget-assets.webp)
 
 It took a while to set up, but that's the retargeter ready to be used for all your animation needs. If you'd like to learn more about animation retargeting in Unreal Engine, check out the <a href="https://docs.unrealengine.com/5.0/en-US/ik-rig-animation-retargeting-in-unreal-engine/" target="_blank">docs</a>.

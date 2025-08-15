@@ -1,8 +1,8 @@
 ---
 title: 'Level Generator'
 description: "Procedural generation of levels using genetic algorithms in Unity."
-headerImg: '/img/level-generator/header.png'
-previewImg: '/img/level-generator/header.png'
+headerImg: '/img/level-generator/header.webp'
+previewImg: '/img/level-generator/header.webp'
 tags: [Genetic Algorithms, Procedural Generation, Unity, C#]
 repositoryUrl: https://github.com/manosmiras/Level-Generator
 order: 2
@@ -27,10 +27,10 @@ I worked on a custom implementation of the A* pathfinding algorithm, which was u
 I made two custom editor windows to help visualize the levels being generated from the genetic algorithms.
 #### Fitness Visualizer Editor
 The fitness visualizer editor window is a chart that is used to visualize the current fitness of each level that is being evaluated.
-![Fitness Visualizer Editor](/img/level-generator/fitness-visualizer.png)
+![Fitness Visualizer Editor](/img/level-generator/fitness-visualizer.webp)
 #### Graph Editor
 The graph editor window is used to display each section of a level and the connections it has to other sections.
-![Graph Editor](/img/level-generator/graph-editor.png)
+![Graph Editor](/img/level-generator/graph-editor.webp)
 
 ## How it works
 

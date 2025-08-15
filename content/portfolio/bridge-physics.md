@@ -1,8 +1,8 @@
 ---
 title: 'Bridge Physics'
 description: 'A physics driven bridge simulation.'
-headerImg: '/img/bridge-physics/header.png'
-previewImg: '/img/bridge-physics/header.png'
+headerImg: '/img/bridge-physics/header.webp'
+previewImg: '/img/bridge-physics/header.webp'
 tags: [Physics Based Animation, C++, OpenGL, GLSL]
 repositoryUrl: https://github.com/manosmiras/Bridge-Physics
 order: 4
@@ -87,7 +87,7 @@ public:
 ```
 
 ## Bridge
-![Bridge Diagram](/img/bridge-physics/bridge-diagram.png)
+![Bridge Diagram](/img/bridge-physics/bridge-diagram.webp)
 
 ### Initialization
 The particles are initialized in 2 straight lines, forming the basis of the bridge.
@@ -224,7 +224,7 @@ struct collisionInfo {
 ## GUI
 I used ImGui to develop a simple user interface so the user can control some aspects of the scene and simulation.
 
-![ImGui](/img/bridge-physics/imgui.png)
+![ImGui](/img/bridge-physics/imgui.webp)
 
 ### GUI Functionality
 - FPS: Displays the frames per second.
