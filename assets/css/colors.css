@@ -11,5 +11,7 @@
         --primary-color: #26bbff;
         --secondary-color: #313139;
         --bg-tag-color: #313139;
+        --sb-thumb: #9aa3af;
+        --sb-track: transparent;
     }
 }

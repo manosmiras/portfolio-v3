@@ -62,4 +62,7 @@
     border-radius: 0.5rem;
     padding: 1rem;
     @apply mb-2;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--sb-thumb) var(--sb-track);
 }
