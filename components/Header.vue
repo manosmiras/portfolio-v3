@@ -21,7 +21,7 @@
       </div>
 
       <button
-          class="md:hidden flex rounded-lg hover:bg-white/5"
+          class="md:hidden flex hover:text-primary"
           @click="isOpen = !isOpen"
           :aria-expanded="isOpen ? 'true' : 'false'"
           aria-controls="mobile-nav"
@@ -36,7 +36,7 @@
         class="md:hidden overflow-hidden transition-[max-height] duration-200"
         :style="{ maxHeight: isOpen ? '16rem' : '0' }"
     >
-      <div class="flex flex-col gap-3 rounded-xl border border-white/10 bg-page p-4">
+      <div class="flex flex-col gap-3 bg-page py-4">
         <NuxtLink class="link" to="/" @click="isOpen=false">Home</NuxtLink>
         <NuxtLink class="link" to="#portfolio" @click="isOpen=false">Portfolio</NuxtLink>
         <NuxtLink class="link" to="#blog" @click="isOpen=false">Blog</NuxtLink>
