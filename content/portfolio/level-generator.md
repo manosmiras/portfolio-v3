@@ -5,7 +5,7 @@ headerImg: '/img/level-generator/header.webp'
 previewImg: '/img/level-generator/header.webp'
 tags: [Genetic Algorithms, Procedural Generation, Unity, C#]
 repositoryUrl: https://github.com/manosmiras/Level-Generator
-order: 2
+order: 3
 outline: 'deep'
 ---
 

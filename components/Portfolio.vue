@@ -6,7 +6,7 @@
     </div>
     <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 px-6 xl:px-20">
       <NuxtLink :to="project.path" class="hover:cursor-pointer group flex flex-col" v-for="project in portfolio">
-        <img class="mb-2 transition-all w-100 rounded-lg group-hover:brightness-105" :src="project.previewImg" :alt="project.title">
+        <img class="mb-2 transition-all max-w-100 max-h-[210px] object-cover rounded-lg group-hover:brightness-105" :src="project.previewImg" :alt="project.title">
         <div class="transition-all group-hover:text-primary font-semibold text-lg">{{project.title}}</div>
         <div class="mb-2">{{ project.description }}</div>
         <div class="flex gap-x-2">
