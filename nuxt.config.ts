@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image', '@nuxt/icon', 'nuxt-gtag'],
+  gtag: {
+    id: 'G-5D2M9QNVFZ',
+  },
   router: {
     options: {
       linkActiveClass: 'link-active'
