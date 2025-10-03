@@ -15,7 +15,7 @@
           <img
               :src="project.previewImg"
               :alt="project.title"
-              class="h-full w-full object-cover object-center transition-all group-hover:brightness-105"
+              class="h-full w-full object-cover object-center transition-all group-hover:brightness-105 group-hover:scale-110"
           />
         </div>
         <div class="mt-2 transition-all group-hover:text-primary font-semibold text-lg">
