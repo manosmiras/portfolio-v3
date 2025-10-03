@@ -2,7 +2,7 @@
   <div>
     <div class="flex flex-col gap-2 text-center py-10 justify-center">
       <div class="text-4xl font-black">Portfolio</div>
-      <p class="text-lg">A mix of professional & private projects I've worked on</p>
+      <p class="text-lg">A mix of professional & personal projects I've worked on</p>
     </div>
     <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 px-6 xl:px-20">
       <NuxtLink
