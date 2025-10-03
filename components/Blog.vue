@@ -5,12 +5,25 @@
       <p class="text-lg">Notes, tips & tricks for my future self</p>
     </div>
     <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1 gap-6 px-6 xl:px-20">
-      <NuxtLink :to="blog.path" class="hover:cursor-pointer group flex flex-col" v-for="blog in blogs">
-        <img class="mb-2 transition-all max-w-100 object-cover rounded-lg group-hover:brightness-105" :src="blog.previewImg" :alt="blog.title">
-        <div class="transition-all group-hover:text-primary font-semibold text-lg">{{blog.title}}</div>
-        <div class="mb-2">{{ blog.description }}</div>
+      <NuxtLink
+          v-for="project in blogs"
+          :key="project.path"
+          :to="project.path"
+          class="hover:cursor-pointer group flex flex-col"
+      >
+        <div class="aspect-video lg:max-h-[28vh] overflow-hidden rounded-lg">
+          <img
+              :src="project.previewImg"
+              :alt="project.title"
+              class="h-full w-full object-cover object-center transition-all group-hover:brightness-105"
+          />
+        </div>
+        <div class="mt-2 transition-all group-hover:text-primary font-semibold text-lg">
+          {{ project.title }}
+        </div>
+        <div class="mb-2">{{ project.description }}</div>
         <div class="flex gap-x-2">
-          <Tags v-model="blog.tags"></Tags>
+          <Tags v-model="project.tags" />
         </div>
       </NuxtLink>
     </div>
