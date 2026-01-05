@@ -3,7 +3,13 @@
     <div class="font-semibold text-sm">Portfolio</div>
     <ul>
       <li class="py-1" v-for="project in portfolio">
-        <NuxtLink class="link text-gray-300" :to="project.path">{{ project.title }}</NuxtLink>
+        <NuxtLink
+            class="link text-gray-300"
+            :to="project.externalUrl || project.path"
+            :target="project.externalUrl ? '_blank' : '_self'"
+        >
+          {{ project.title }}
+        </NuxtLink>
       </li>
     </ul>
     <div class="border-b-gray-600 border-b my-3"/>
