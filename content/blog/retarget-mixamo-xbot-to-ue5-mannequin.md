@@ -3,7 +3,7 @@ title: 'Mixamo X Bot to UE 5 Mannequin'
 description: "A step by step guide on how to retarget animations from Mixamo's X Bot to Unreal Engine's Mannequin."
 headerImg: '/img/xbot-to-mannequin/header.webp'
 previewImg: '/img/xbot-to-mannequin/matched-poses.webp'
-tags: [Mixamo, Unreal Engine 5, Animation, Retargeting]
+tags: [Mixamo, Unreal Engine, Animation, Retargeting]
 dateCreated: '2023-03-07'
 dateUpdated: '2023-03-12'
 order: 1
@@ -37,7 +37,7 @@ In the download settings, make sure the following are selected:
 
 That should be everything you need from the Mixamo side.
 
-## Unreal Engine 5
+## Unreal Engine
 
 If you don't already have an Unreal Engine project, go ahead and create one, I will be using the **Third Person** template.
 

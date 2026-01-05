@@ -8,7 +8,8 @@
       <NuxtLink
           v-for="project in portfolio"
           :key="project.path"
-          :to="project.path"
+          :to="project.externalUrl || project.path"
+          :target="project.externalUrl ? '_blank' : '_self'"
           class="hover:cursor-pointer group flex flex-col"
       >
         <div class="aspect-video lg:max-h-[28vh] overflow-hidden rounded-lg">

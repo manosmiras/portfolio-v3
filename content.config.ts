@@ -19,10 +19,11 @@ export default defineContentConfig({
             type: 'page',
             // Define custom schema for docs collection
             schema: z.object({
-                headerImg: z.string(),
+                headerImg: z.string().optional(),
                 previewImg: z.string(),
                 tags: z.array(z.string()),
                 repositoryUrl: z.string(),
+                externalUrl: z.string().optional(),
                 order: z.number(),
             })
         }),
