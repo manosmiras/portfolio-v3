@@ -5,7 +5,7 @@ headerImg: '/img/boids/header.webp'
 previewImg: '/img/boids/header.webp'
 tags: [Godot, C#, Spatial Partitioning, Multithreading]
 repositoryUrl: https://github.com/manosmiras/Boids
-order: 2
+order: 3
 outline: 'deep'
 ---
 
