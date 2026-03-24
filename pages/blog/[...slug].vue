@@ -15,7 +15,7 @@
       </div>
       <Tags class="pt-1" v-model="page.tags"></Tags>
     </div>
-    <ContentRenderer v-if="page" :value="page"/>
+    <ContentRenderer class="content" v-if="page" :value="page"/>
   </main>
 </template>
 
@@ -29,14 +29,3 @@ definePageMeta({
 const route = useRoute();
 const {data: page} = await useAsyncData(route.path, () => queryCollection('blog').path(route.path).first());
 </script>
-
-<style scoped>
-
-:deep(img) {
-  @apply my-2;
-}
-
-:deep(p:not(.description)) {
-  @apply mb-2;
-}
-</style>

@@ -59,6 +59,29 @@
             border-radius: 0.5rem;
         }
     }
+
+    .content {
+        ol {
+            list-style: decimal;
+        }
+
+        ul {
+            list-style: disc;
+        }
+
+        li {
+            margin-left: 1.25rem;
+            margin-block: 0.25rem;
+        }
+
+        img {
+            margin-block: 1rem;
+        }
+
+        p:not(.description) {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .language-text {
