@@ -28,10 +28,14 @@ After that, the rendered text image is passed into a material instance, which pr
     - RenderInt
 4. Each function provides parameters to customize the look of the text, you can control the text's color, scale, and whether there's an outline.
 
+![Floating Text Component Functions](/img/floating-text-ue/floating-text-functions.png)
+
 The component comes with some default values that can be changed to further edit the look:
 - <b>Font</b>: The font that will be used to render a given string, the font has a "Legacy Font Size" property, which is used to drive the rendered font size. The plugin comes with 3 different font sizes for the default engine Roboto Font.
 - <b>NiagaraSystem</b>: The niagara system that will be spawned into the world to display the rendered text. There are 2 provided with the plugin, one with some movement variation, and a static one. 
 - <b>Material</b>: The material the niagara system will use for sprite rendering, it will receive params from the niagara system and will use them to apply text color, opacity, etc.
+
+![Floating Text Component Properties](/img/floating-text-ue/floating-text-properties.png)
 
 ## Future Improvements
 This project covered my needs for the game prototype I'm using it in, so I'm happy with the result, however, if I were to visit it again, I'd like to improve the following:
