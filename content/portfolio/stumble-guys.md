@@ -3,7 +3,7 @@ title: 'Stumble Guys'
 description: "A massive multiplayer party knockout game."
 headerImg: '/img/stumble-guys/header.webp'
 previewImg: '/img/stumble-guys/header.webp'
-tags: [Tools Programming, Unity, C#, Python, Blender, Autodesk Maya]
+tags: [Unity, C#, Python, Blender, Autodesk Maya, Tools Programming]
 order: 1
 outline: 'deep'
 ---
