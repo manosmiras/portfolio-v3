@@ -11,7 +11,7 @@ outline: 'deep'
 ## About
 This project is a high-performance, procedural terrain generation system developed in Unity. 
 It creates an infinite, seamless landscape using Perlin noise, featuring a chunk-based loading system and lod optimizations. 
-The core focus was on leveraging modern Unity features like the Job System and Burst Compiler to ensure smooth performance even with complex mesh generation.
+The core focus was on leveraging modern Unity features like the Job System to ensure smooth performance even with complex mesh generation.
 
 ## Technical Highlights
 *   **Multithreaded Generation**: Utilizes the Unity Job System and `IJobFor` to offload heightmap calculation and mesh reconstruction from the main thread, maintaining high frame rates during terrain discovery.
@@ -26,7 +26,7 @@ The core focus was on leveraging modern Unity features like the Job System and B
 *   **`MeshJob` & `HeightMapJob`**: Burst-compiled jobs that handle the heavy lifting of generating the heightmap and mesh for each terrain chunk.
 
 ## Showcase
-<iframe class="w-full aspect-video" width="960" height="540" src="https://www.youtube.com/embed/dFB0XW6M8oo?si=Q5K_PTS-p3VjZKHK" title="Procedural Terrain" allowfullscreen></iframe>
+<iframe class="w-full aspect-video" width="960" height="540" src="https://www.youtube.com/embed/FmCzuQySSKc?si=hYe6i0-z9kCs-jib" title="Procedural Terrain" allowfullscreen></iframe>
 
 ## Future Improvements
 *   GPU-accelerated grass and detail scattering using Compute Shaders.
