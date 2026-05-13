@@ -1,8 +1,8 @@
 ---
 title: 'Procedural Terrain'
 description: 'Procedural Terrain generation in Unity.'
-previewImg: '/img/procedural-terrain/header.png'
-headerImg: '/img/procedural-terrain/header.png'
+previewImg: '/img/procedural-terrain/header.webp'
+headerImg: '/img/procedural-terrain/header.webp'
 tags: [Unity, C#, Job System, Tech Art, Procedural Generation]
 repositoryUrl: https://github.com/manosmiras/ProceduralTerrain
 order: 0

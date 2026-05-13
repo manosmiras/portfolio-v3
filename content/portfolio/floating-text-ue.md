@@ -1,8 +1,8 @@
 ---
 title: 'Floating Text UE Plugin'
 description: 'Unreal Engine plugin for rendering floating text.'
-previewImg: '/img/floating-text-ue/header.png'
-headerImg: '/img/floating-text-ue/header.png'
+previewImg: '/img/floating-text-ue/header.webp'
+headerImg: '/img/floating-text-ue/header.webp'
 tags: [Unreal Engine, C++, Blueprint, Tech Art, VFX]
 repositoryUrl: https://github.com/manosmiras/FloatingTextUE
 order: 2
@@ -28,14 +28,14 @@ After that, the rendered text image is passed into a material instance, which pr
     - RenderInt
 4. Each function provides parameters to customize the look of the text, you can control the text's color, scale, and whether there's an outline.
 
-![Floating Text Component Functions](/img/floating-text-ue/floating-text-functions.png)
+![Floating Text Component Functions](/img/floating-text-ue/floating-text-functions.webp)
 
 The component comes with some default values that can be changed to further edit the look:
 - <b>Font</b>: The font that will be used to render a given string, the font has a "Legacy Font Size" property, which is used to drive the rendered font size. The plugin comes with 3 different font sizes for the default engine Roboto Font.
 - <b>NiagaraSystem</b>: The Niagara system that will be spawned into the world to display the rendered text. There are 2 provided with the plugin, one with some movement variation, and a static one. 
 - <b>Material</b>: The material the Niagara system will use for sprite rendering, it will receive params from the Niagara system and will use them to apply text color, opacity, etc.
 
-![Floating Text Component Properties](/img/floating-text-ue/floating-text-properties.png)
+![Floating Text Component Properties](/img/floating-text-ue/floating-text-properties.webp)
 
 ## Showcase
 <iframe class="w-full aspect-video" width="960" height="540" src="https://www.youtube.com/embed/dFB0XW6M8oo?si=Q5K_PTS-p3VjZKHK" title="Floating Text UE Plugin" allowfullscreen></iframe>
