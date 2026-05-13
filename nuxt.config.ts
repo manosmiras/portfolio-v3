@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '@nuxt/image', '@nuxt/icon', 'nuxt-gtag'],
   gtag: {
-    id: 'G-5D2M9QNVFZ',
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
   },
   router: {
     options: {
