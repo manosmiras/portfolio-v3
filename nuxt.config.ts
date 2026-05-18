@@ -29,4 +29,13 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  app: {
+    head: {
+      title: 'Manos Miras',
+      meta: [
+        { name: 'description', content: 'Manos Miras - Portfolio' },
+        { name: 'keywords', content: 'Manos Miras, Portfolio, Software Engineer, Game Developer' },
+      ],
+    },
+  },
 })

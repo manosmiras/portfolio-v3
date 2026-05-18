@@ -29,6 +29,12 @@ import {definePageMeta} from "#imports";
 definePageMeta({
   layout: 'project',
 });
+
 const route = useRoute();
 const {data: page} = await useAsyncData(route.path, () => queryCollection('portfolio').path(route.path).first());
+
+useHead({
+  title: page.value?.title,
+  meta:[{name: 'description', content: page.value?.description}]
+});
 </script>
